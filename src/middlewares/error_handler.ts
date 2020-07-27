@@ -13,6 +13,7 @@ export const errorHandler = (
    return res.status(err.statusCode).send({errors: err.serializeErrors()})
   }
 
+  console.log(err)
   //Generic Error
   res.status(400).send({
     errors: [{ message: 'Something went wrong' }]
